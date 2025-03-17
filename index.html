@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConexãoVendas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="h3">
+        <h3>Bem-vindo ao nosso Sistema de Vendas!<br> Aqui, você tem tudo o 
+            que precisa para gerenciar seus produtos, clientes e vendas de forma simples
+             e eficiente. <br>Controle seu estoque, acompanhe suas transações e maximize seus resultados 
+             com praticidade. <br>O sucesso do seu negócio começa 
+            com organização e automação. Venda mais, cresça mais e conquiste novos horizontes!</h3>
+    </div>
+    <h1>Conexão Vendas</h1>
+
+    <div class="container">
+        <!-- Cadastro de Produtos -->
+        <div class="box">
+            <h2>Cadastro de Produtos</h2>
+            <input type="text" id="produtoNome" placeholder="Nome do Produto">
+            <input type="number" id="produtoPreco" placeholder="Preço">
+            <input type="number" id="produtoEstoque" placeholder="Estoque">
+            <button onclick="addProduto()">Adicionar Produto</button>
+            <div id="listaProdutos"></div>
+        </div>
+
+        <!-- Cadastro de Clientes -->
+        <div class="box">
+            <h2>Cadastro de Clientes</h2>
+            <input type="text" id="clienteNome" placeholder="Nome do Cliente">
+            <input type="text" id="clienteTelefone" placeholder="Telefone">
+            <button onclick="addCliente()">Adicionar Cliente</button>
+            <div id="listaClientes"></div>
+        </div>
+
+        <!-- Realizar Venda -->
+        <div class="box">
+            <h2>Realizar Venda</h2>
+            <input type="number" id="vendaClienteId" placeholder="ID do Cliente">
+            <input type="number" id="vendaProdutoId" placeholder="ID do Produto">
+            <input type="number" id="vendaQuantidade" placeholder="Quantidade">
+            <button onclick="realizarVenda()">Vender</button>
+            <div id="listaVendas"></div>
+        </div>
+
+        <!-- Relatórios -->
+        <div class="box">
+            <h2>Relatórios</h2>
+            <button onclick="exibirEstoque()">Estoque Atual</button>
+            <button onclick="totalVendas()">Total de Vendas</button>
+            <div id="relatorios"></div>
+        </div>
+    </div>
+    
+
+    <script src="app.js"></script>
+    <h3>Sistema desenvolvido com excelência por <bR>Diego Cutrim Oliveira, 
+        para transformar suas vendas em resultados extraordinários.</h3>
+        
+    
+     <!--    <h2>Relatório de Vendas</h2>
+<table id="tabelaRelatorio" border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Cliente</th>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        Os dados serão inseridos aqui via JavaScript 
+    </tbody>
+</table>
+<button onclick="exportarExcel()">Exportar para Excel</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script> -->
+
+
+</body>
+</html>

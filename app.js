@@ -95,3 +95,27 @@ function totalVendas() {
     let lista = document.getElementById("relatorios");
     lista.innerHTML = `Total de Vendas: R$ ${total.toFixed(2)}`;
 }
+
+function listarRelatorio() {
+    let tabela = document.getElementById("tabelaRelatorio").getElementsByTagName("tbody")[0];
+    tabela.innerHTML = ""; // Limpa a tabela antes de preencher
+
+    vendas.forEach((venda, index) => {
+        let row = tabela.insertRow();
+        row.insertCell(0).textContent = index + 1; // ID da venda
+        row.insertCell(1).textContent = venda.cliente;
+        row.insertCell(2).textContent = venda.produto;
+        row.insertCell(3).textContent = `R$ ${venda.preco.toFixed(2)}`;
+        row.insertCell(4).textContent = venda.quantidade;
+        row.insertCell(5).textContent = `R$ ${(venda.preco * venda.quantidade).toFixed(2)}`;
+    });
+}
+
+//function exportarExcel() {
+    //listarRelatorio(); // Atualiza a tabela antes da exportação
+   // let tabela = document.getElementById("tabelaRelatorio");
+    //let wb = XLSX.utils.table_to_book(tabela, { sheet: "Relatório" });
+    //XLSX.writeFile(wb, "Relatorio_Vendas.xlsx");
+//}
+
+
